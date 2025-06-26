@@ -5,6 +5,10 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn irrigation.wsgi:application
     envVars:
-      - key: 
-      
+      - key: DJANGO_SETTINGS_MODULE
         value: irrigation.settings
+      - key: SECRET_KEY
+        value: your_secret_key_here
+      - key: DEBUG
+        value: false
+
